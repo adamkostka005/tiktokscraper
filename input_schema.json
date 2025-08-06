@@ -1,0 +1,58 @@
+{
+  "title": "TikTok Ad Scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "region": {
+      "title": "Region",
+      "type": "string",
+      "description": "Country (e.g. CZ, SK)",
+      "default": "",
+      "editor": "textfield"
+    },
+    "start_date": {
+      "title": "Start Date",
+      "type": "string",
+      "description": "YYYYMMDD",
+      "editor": "textfield"
+    },
+    "end_date": {
+      "title": "End Date",
+      "type": "string",
+      "description": "YYYYMMDD",
+      "editor": "textfield"
+    },
+    "search_query": {
+      "title": "Search Query",
+      "type": "string",
+      "description": "Search term",
+      "default": "",
+      "editor": "textfield"
+    },
+    "query_type": {
+      "title": "Query Type",
+      "type": "string",
+      "description": "Query type",
+      "enum": ["1", "2", ""],
+      "default": "",
+      "editor": "select"
+    },
+    "maximum_results": {
+      "title": "Maximum Results",
+      "type": "integer",
+      "description": "Maximum number of ads to download",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 500,
+      "editor": "number"
+    },
+    "scrape_details": {
+      "title": "Scrape ad details?",
+      "type": "boolean",
+      "description": "-",
+      "default": false,
+      "editor": "checkbox"
+    }
+  },
+  "required": ["region", "start_date", "end_date"]
+}
